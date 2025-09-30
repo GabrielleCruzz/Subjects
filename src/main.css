@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%; /* #F8F9FA */
+    --foreground: 210 17% 15%; /* #212529 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 17% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 17% 15%;
+
+    --primary: 250 57% 58%; /* #6A5ACD */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 266 78% 65%; /* #8A2BE2 */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 97%;
+    --muted-foreground: 212 10% 45%; /* #6C757D */
+
+    --accent: 220 20% 94%;
+    --accent-foreground: 210 17% 15%;
+
+    --destructive: 354 70% 54%; /* #DC3545 */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 145 63% 42%; /* #28A745 */
+    --error: 354 70% 54%; /* #DC3545 */
+    --warning: 45 100% 51%; /* #FFC107 */
+
+    --border: 216 18% 87%; /* #DEE2E6 */
+    --input: 216 18% 87%;
+    --ring: 250 57% 58%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Dark theme colors can be defined here if needed */
+    --background: 210 17% 15%;
+    --foreground: 220 20% 97%;
+
+    --card: 210 17% 18%;
+    --card-foreground: 220 20% 97%;
+
+    --popover: 210 17% 18%;
+    --popover-foreground: 220 20% 97%;
+
+    --primary: 250 57% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 266 78% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 17% 20%;
+    --muted-foreground: 212 10% 65%;
+
+    --accent: 210 17% 22%;
+    --accent-foreground: 220 20% 97%;
+
+    --destructive: 354 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 216 18% 30%;
+    --input: 216 18% 30%;
+    --ring: 250 57% 58%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+    line-height: 1.2;
+  }
+
+  p {
+    @apply leading-relaxed; /* 1.6 */
+  }
+}
+
+@layer components {
+  .animated-gradient {
+    background: linear-gradient(45deg, #6a5acd, #8a2be2, #00bfff);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .typewriter-text {
+    position: relative;
+    width: max-content;
+  }
+
+  .typewriter-text::before,
+  .typewriter-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .typewriter-text::before {
+    background: hsl(var(--background));
+    animation: typewriter 2s steps(28) 1s forwards;
+  }
+
+  .typewriter-text::after {
+    width: 0.125em;
+    background: hsl(var(--foreground));
+    animation:
+      typewriter 2s steps(28) 1s forwards,
+      blink 750ms steps(28) infinite;
+  }
+
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+}

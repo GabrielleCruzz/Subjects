@@ -1,0 +1,166 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ana Julia",
+      "email": "ana@example.com",
+      "password": "password123_hashed",
+      "role": "student",
+      "avatarUrl": "https://img.usecurling.com/ppl/large?gender=female&seed=1",
+      "series": "9º Ano",
+      "score": 12500,
+      "rank": 1,
+      "registeredAt": "2024-08-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Silva",
+      "email": "carlos@example.com",
+      "password": "password123_hashed",
+      "role": "teacher",
+      "avatarUrl": "https://img.usecurling.com/ppl/large?gender=male&seed=2",
+      "institution": "Colégio Saber",
+      "score": 11800,
+      "rank": 2,
+      "registeredAt": "2024-07-25T11:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Beatriz Souza",
+      "email": "beatriz@example.com",
+      "password": "password123_hashed",
+      "role": "student",
+      "avatarUrl": "https://img.usecurling.com/ppl/large?gender=female&seed=3",
+      "series": "1º Ano Ensino Médio",
+      "score": 11500,
+      "rank": 3,
+      "registeredAt": "2024-07-22T12:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123_hashed",
+      "role": "admin",
+      "avatarUrl": "https://img.usecurling.com/ppl/large?gender=male&seed=4",
+      "score": 99999,
+      "rank": 0,
+      "registeredAt": "2024-07-20T13:00:00Z"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "title": "Introdução à Álgebra",
+      "description": "Neste vídeo, vamos explorar os conceitos fundamentais da álgebra, incluindo variáveis, expressões e equações. Perfeito para quem está começando a se aventurar no mundo da matemática!",
+      "subject": "Matemática",
+      "videoUrl": "https://videos.usecurling.com/p/1280/720?q=algebra%20chalkboard%20lesson",
+      "thumbnailUrl": "https://img.usecurling.com/p/1280/720?q=algebra%20chalkboard%20lesson",
+      "uploaderId": 2,
+      "likes": 123,
+      "views": 4567
+    },
+    {
+      "id": "2",
+      "title": "Revolução Francesa em 20 Minutos",
+      "thumbnailUrl": "https://img.usecurling.com/p/400/225?q=french%20revolution",
+      "videoUrl": "https://videos.usecurling.com/p/1280/720?q=french%20revolution",
+      "description": "Um resumo completo sobre um dos eventos mais importantes da história mundial.",
+      "subject": "História",
+      "uploaderId": 2,
+      "likes": 250,
+      "views": 8900
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "videoId": "1",
+      "userId": 3,
+      "text": "Ótimo vídeo, me ajudou muito a entender!",
+      "timestamp": "2024-08-14T14:00:00Z",
+      "status": "Aprovado"
+    },
+    {
+      "id": "2",
+      "videoId": "1",
+      "userId": 1,
+      "text": "Excelente explicação, professor!",
+      "timestamp": "2024-08-14T15:00:00Z",
+      "status": "Pendente"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "equacoes-1",
+      "title": "Quiz de Equações",
+      "subject": "Matemática",
+      "difficulty": "Fácil",
+      "questions": [
+        {
+          "question": "Quanto é 2x = 10?",
+          "options": ["x = 2", "x = 5", "x = 8", "x = 10"],
+          "answer": "x = 5"
+        },
+        {
+          "question": "Resolva: 3x - 5 = 4",
+          "options": ["x = 1", "x = 2", "x = 3", "x = 9"],
+          "answer": "x = 3"
+        },
+        {
+          "question": "Qual o valor de y em 2y + 7 = 17?",
+          "options": ["y = 3", "y = 4", "y = 5", "y = 10"],
+          "answer": "y = 5"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Resolver lista de exercícios de Álgebra",
+      "dueDate": "2025-08-19T23:59:59Z",
+      "status": "pending"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Assistir vídeo sobre a Guerra Fria (Urgente)",
+      "dueDate": "2025-08-14T23:59:59Z",
+      "status": "pending"
+    },
+    {
+      "id": "3",
+      "userId": 3,
+      "title": "Escrever redação sobre Modernismo (Atrasada)",
+      "dueDate": "2025-08-12T23:59:59Z",
+      "status": "pending"
+    },
+    {
+      "id": "4",
+      "userId": 3,
+      "title": "Entregar trabalho de Biologia",
+      "dueDate": "2025-08-09T23:59:59Z",
+      "status": "completed"
+    }
+  ],
+  "communityPosts": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Qual a melhor forma de estudar para o ENEM?",
+      "content": "Estou começando a me preparar para o ENEM e queria saber quais métodos de estudo vocês mais recomendam. Alguma dica de cronograma ou material?",
+      "timestamp": "2024-08-14T12:00:00Z",
+      "likes": [2, 3],
+      "comments": [
+        {
+          "id": "c1",
+          "userId": 2,
+          "text": "Recomendo a técnica Pomodoro e fazer muitos simulados!",
+          "timestamp": "2024-08-14T12:30:00Z"
+        }
+      ]
+    }
+  ]
+}
